@@ -1,0 +1,26 @@
+.footer{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg,rgb(184, 85, 85),rgb(72, 26, 165));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.links{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    ul{
+        list-style: none;
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        *{
+            color: white;
+            text-decoration: none;
+        }
+    }
+}

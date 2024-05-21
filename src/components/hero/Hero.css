@@ -1,0 +1,69 @@
+/* .hero{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.herobox{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: aqua;
+} */
+/* h-screen flex bg-gray-950 justify-center place-items-center */
+.hero{
+    height: 742px;
+    display: flex;
+    background-image:url(https://www.desktopbackground.org/download/o/2015/03/05/912298_wallpapers-handsum-man-fashion-handsome-men-hd-get-1920x1080_1920x1080_h.jpg);
+    justify-content: center;
+    background-size: cover;
+    place-items: center;
+    max-width: 1600px;
+    h1{
+        left: 10%;
+        top: 10%;
+        position: absolute;
+        font-size: 20ex;
+        color: white;
+        max-width: 1600px;
+    }
+    h2{
+        left: 10%;
+        top: 50%;
+        position: absolute;
+        font-size: 8ex;
+        color: white;
+        max-width: 1600px;
+    }
+    h3{
+        left: 7%;
+        top: 55%;
+        position: absolute;
+        font-size: 5ex;
+        color: white;
+        max-width: 1600px;
+    }
+}
+.texts{
+    max-width: 1600px;
+    height: 100%;
+    padding: 10px;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    h1{
+        font-size:50px;
+        max-width: 1600px;
+    }
+}
