@@ -4,7 +4,7 @@ import { useLayoutEffect } from 'react';
 import gsap from 'gsap';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 
-function Hero() {
+function Hero({textenter,textleave}) {
   const comp = useRef(null);
   const title1 = useRef(null);
   const title2 = useRef(null);
@@ -55,17 +55,18 @@ function Hero() {
   return (
     <div className='bighero' style={{ position: 'relative' }} ref={comp}>
       <div className='texts' ref={intro}>
-        <h1 ref={title1}>FRONTEND DEVELOPER</h1>
-        <h1 ref={title2}>HTML CSS</h1>
-        <h1 ref={title3}>REACT JS , JavaScript</h1>
+        <h1 onMouseEnter={textenter} onMouseLeave={textleave} ref={title1}>FRONTEND DEVELOPER</h1>
+        <h1 onMouseEnter={textenter} onMouseLeave={textleave} ref={title2}>HTML CSS</h1>
+        <h1 onMouseEnter={textenter} onMouseLeave={textleave} ref={title3}>REACT JS , JavaScript</h1>
       </div>
       <div className="hero">
-        <h1 style={{ color: 'white' }} className='text-9xl text-gray-100' ref={welcome}>Welcome.</h1>
-        <h2 ref={welcome2}>Hi, It's <span style={{color: 'aqua'}}>Ikrom</span></h2>
-        <h3 ref={welcome3} style={{ margin: '50px' }}>I'm a{" "} <span style={{ fontWeight: 'bold', color: 'green' }}>{text}</span><span><Cursor cursorStyle='</>' cursorColor='gold' /></span></h3>
+        <h1 onMouseEnter={textenter} onMouseLeave={textleave} style={{ color: 'white' }} className='text-9xl text-gray-100' ref={welcome}>Welcome.</h1>
+        <h2 onMouseEnter={textenter} onMouseLeave={textleave} ref={welcome2}>Hi, It's <span style={{color: 'aqua'}}>Ikrom</span></h2>
+        <h3 onMouseEnter={textenter} onMouseLeave={textleave} ref={welcome3} style={{ margin: '50px' }}>I'm a{" "} <span style={{ fontWeight: 'bold', color: 'green' }}>{text}</span><span><Cursor cursorStyle='</>' cursorColor='gold' /></span></h3>
       </div>
     </div>
   );
 }
+
 
 export default Hero;

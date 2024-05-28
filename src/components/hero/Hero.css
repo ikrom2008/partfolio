@@ -16,6 +16,10 @@
 /* h-screen flex bg-gray-950 justify-center place-items-center */
 .hero{
     height: 742px;
+    margin: 0 auto;
+    /* height: 100%; */
+    position: relative;
+    width: 100%;
     display: flex;
     background-image:url(https://www.desktopbackground.org/download/o/2015/03/05/912298_wallpapers-handsum-man-fashion-handsome-men-hd-get-1920x1080_1920x1080_h.jpg);
     justify-content: center;
@@ -54,7 +58,6 @@
     background: white;
     position: absolute;
     top: 0;
-    left: 0;
     z-index: 10;
     width: 100%;
     display: flex;

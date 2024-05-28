@@ -1,23 +1,28 @@
 import { FullPageSections, Fullpage, FullpageNavigation, FullpageSection } from '@ap.cx/react-fullpage'
 import Hero from '../hero/Hero'
-import Main from '../main/Main'
 import '../hero/Hero.css'
 import Footer from '../footer/Footer'
-function Fullpages() {
+import Section1 from '../main/Section1'
+import Section2 from '../main/Section2'
+function Fullpages({textenter,textleave}) {
   return (
-    <Fullpage>
+    <Fullpage className="container">
         <FullpageNavigation style={{cursor: 'pointer'}} />
-        <FullPageSections>
+        <FullPageSections className='container'>
             <FullpageSection>
-                <Hero />
+                <Hero textenter={textenter} textleave={textleave} />
             </FullpageSection>
             <FullpageSection>
-                <Main />
+                <Section1 textenter={textenter} textleave={textleave} />
             </FullpageSection>
             <FullpageSection>
-                <Footer />
+                <Section2 textenter={textenter} textleave={textleave} />
+            </FullpageSection>
+            <FullpageSection>
+                <Footer textenter={textenter} textleave={textleave} />
             </FullpageSection>
         </FullPageSections>
+        
     </Fullpage>
   )
 }

@@ -3,7 +3,7 @@ import './Footer.css'
 import { useLayoutEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-function Footer() {
+function Footer({textenter,textleave}) {
   gsap.registerPlugin(ScrollTrigger);
   let ul1 = useRef(null)
   let ul2 = useRef(null)
@@ -12,9 +12,9 @@ function Footer() {
   useLayoutEffect(() => {
       const tl = gsap.timeline({
         scrollTrigger: {
-          start: 'top top top',
-          end: 'bottom -=100%',
-          pin: true
+          start: 'top +=300vh',
+          end: 'bottom -=300vh',
+          pin: true,
         }
       })
       tl.fromTo(
@@ -43,20 +43,20 @@ function Footer() {
       <footer className="footer">
           <div className='links'>
           <ul ref={ul1}>
-            <li><strong>Phone Numeber👇</strong></li>
-            <li>+998996949044</li>
+            <li onMouseEnter={textenter} onMouseLeave={textleave}><strong>Phone Numeber👇</strong></li>
+            <li onMouseEnter={textenter} onMouseLeave={textleave}>+998996949044</li>
           </ul>
           <ul ref={ul2}>
-            <li><strong>Git Hub👇</strong></li>
-            <li><Link to='https://github.com/ikrom2008?tab=repositories'>ikrom2008</Link></li>
+            <li onMouseEnter={textenter} onMouseLeave={textleave}><strong>Git Hub👇</strong></li>
+            <li onMouseEnter={textenter} onMouseLeave={textleave}><Link to='https://github.com/ikrom2008?tab=repositories'>ikrom2008</Link></li>
           </ul>
           <ul ref={ul3}>
-            <li><strong>Telegram👇</strong></li>
-            <li><Link to='https://t.me/DEATHANGEL_admin'>Ikrom</Link></li>
+            <li onMouseEnter={textenter} onMouseLeave={textleave}><strong>Telegram👇</strong></li>
+            <li onMouseEnter={textenter} onMouseLeave={textleave}><Link to='https://t.me/DEATHANGEL_admin'>Ikrom</Link></li>
           </ul>
           <ul ref={ul4}>
-            <li><strong>Gmail👇</strong></li>
-            <li><Link to='https://ikrombohodirov@gmail.com'>ikrombohodirov@gmail.com</Link></li>
+            <li onMouseEnter={textenter} onMouseLeave={textleave}><strong>Gmail👇</strong></li>
+            <li onMouseEnter={textenter} onMouseLeave={textleave}><Link to='https://ikrombohodirov@gmail.com'>ikrombohodirov@gmail.com</Link></li>
           </ul>
           </div>
       </footer>
