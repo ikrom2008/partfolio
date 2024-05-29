@@ -5,7 +5,7 @@ import Contact from './pages/contact/Contact'
 import Footer from './components/footer/Footer'
 import Fullpages from './components/fullpages/Fullpages'
 import { useEffect, useState } from 'react'
-import {motion} from 'framer-motion'
+import {color, motion} from 'framer-motion'
 function App() {
   const [mosueps,setMouseps] = useState({
     x:0,
@@ -40,11 +40,19 @@ function App() {
       height: 70,
       backgroundColor: 'yellow',
       mixBlendMode: 'difference'
+    },
+    bigtext:{
+      x: mosueps.x -16,
+      y: mosueps.y -16,
+      width: 150,
+      height: 150,
+      backgroundColor: 'yellow',
+      mixBlendMode: 'difference'
     }
   }
   const textenter = () => setMousevr('text')
   const textleave = () => setMousevr('default')
-  console.log(mousevr);
+  const bigtextenter = () => setMousevr('bigtext')
   return (
     <>
     <div className='container'>
@@ -53,12 +61,11 @@ function App() {
       <Routes>
         <Route path='/' element={
         <div>
-          <Fullpages textenter={textenter} textleave={textleave} />
+          <Fullpages bigtextenter={bigtextenter} textenter={textenter} textleave={textleave} />
         </div>} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
-      
     </div>
     </>
   )

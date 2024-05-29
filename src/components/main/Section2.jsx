@@ -38,7 +38,8 @@ function Section2({textenter,textleave}) {
       );
     },[]);
   return (
-    <div className='section2'>
+    <>
+    <section className='section2'>
       <h2 onMouseEnter={textenter} onMouseLeave={textleave}>About</h2>
       <div>
         <div className='hobbies'>
@@ -52,7 +53,9 @@ function Section2({textenter,textleave}) {
         <img ref={it} src="https://jobs.theguardian.com/getasset/ce653764-ad15-4ccc-b4ce-bfafa4b56449/" alt="" />
         </div>
       </div>
-    </div>
+    </section>
+    </>
+    
   )
 }
 

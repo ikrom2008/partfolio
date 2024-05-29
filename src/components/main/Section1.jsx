@@ -35,7 +35,7 @@ function Section1({textenter,textleave}) {
       );
     },[]);
   return (
-    <div>
+    <>
       <section className='main section1'>
           <img
             ref={dog1}
@@ -60,7 +60,7 @@ function Section1({textenter,textleave}) {
           </div>
           
         </section>
-    </div>
+    </>
   )
 }
 

@@ -47,6 +47,15 @@
         place-content: center;
     }
 }
+.section3{
+    width: 100%;
+    max-width: 1600px;
+    height: 100vh;
+    margin:  0 auto;
+    padding-left: 10%;
+    padding-top: 50px;
+    background: linear-gradient(150deg,rgb(173, 105, 8),rgb(33, 190, 59));
+}
 .hobbies{
     display: flex;
     flex-direction: column;

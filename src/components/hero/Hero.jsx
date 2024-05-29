@@ -4,7 +4,7 @@ import { useLayoutEffect } from 'react';
 import gsap from 'gsap';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 
-function Hero({textenter,textleave}) {
+function Hero({textenter,textleave,bigtextenter}) {
   const comp = useRef(null);
   const title1 = useRef(null);
   const title2 = useRef(null);
@@ -60,7 +60,7 @@ function Hero({textenter,textleave}) {
         <h1 onMouseEnter={textenter} onMouseLeave={textleave} ref={title3}>REACT JS , JavaScript</h1>
       </div>
       <div className="hero">
-        <h1 onMouseEnter={textenter} onMouseLeave={textleave} style={{ color: 'white' }} className='text-9xl text-gray-100' ref={welcome}>Welcome.</h1>
+        <h1 onMouseEnter={bigtextenter} onMouseLeave={textleave} style={{ color: 'white' }} className='text-9xl text-gray-100' ref={welcome}>Welcome.</h1>
         <h2 onMouseEnter={textenter} onMouseLeave={textleave} ref={welcome2}>Hi, It's <span style={{color: 'aqua'}}>Ikrom</span></h2>
         <h3 onMouseEnter={textenter} onMouseLeave={textleave} ref={welcome3} style={{ margin: '50px' }}>I'm a{" "} <span style={{ fontWeight: 'bold', color: 'green' }}>{text}</span><span><Cursor cursorStyle='</>' cursorColor='gold' /></span></h3>
       </div>
